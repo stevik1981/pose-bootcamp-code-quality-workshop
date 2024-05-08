@@ -4,10 +4,12 @@ on:
  pull_request:
 jobs:
  hello:
-   steps:
+    runs-on: ubuntu-latest
+    steps:
      - name: Print Hello
        run: echo Hello
  world:
+   runs-on: windows-2022
    needs: hello
    steps:
      - name: Print World
